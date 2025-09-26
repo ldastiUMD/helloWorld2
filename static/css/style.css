@@ -1,0 +1,35 @@
+/* Step 5a: Make paragraphs easier to read */
+p {
+  color: #222;          /* dark text */
+  font-size: 16px;      /* size easy to read */
+}
+
+/* Step 5b: h2 headers */
+h2 {
+  color: #0f2b6b;       /* navy blue */
+  font-size: 20px;
+}
+
+/* Step 5c: Border to table */
+table {
+  border: 2px solid #444;   /* solid grey border */
+}
+
+/* Step 5d: Unique paragraph */
+#unique-paragraph {
+  color: darkgreen;     /* green text because unique */
+  font-size: 18px;
+}
+
+/* Step 5e: Class selector for the unordered list */
+.highlight-list {
+  background-color: #f9f9f9;   /* grey background */
+}
+
+/* Step 5f: Logo image from HTML to CSS */
+.logo {
+  width: 180px;         /* logo width */
+  height: 60px;         /* logo height */
+}
+
+
