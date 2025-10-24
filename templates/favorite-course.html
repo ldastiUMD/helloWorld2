@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Favorite Course{% endblock %}
+
+{% block content %}
+  <!-- Page content -->
+  <h1>Favorite Course</h1>
+  <!-- Only show this line when both values are entered -->
+  {% if subject and course_number %}
+    <p>You entered your favorite course as: {{ subject }}{{ course_number }}</p>
+  {% endif %}
+{% endblock %}
