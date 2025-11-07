@@ -28,7 +28,7 @@ with app.app_context():
             'first_name': 'Laith',
             'last_name': 'Dasti',
             'password': generate_password_hash('ldasti', method='pbkdf2:sha256'),
-            'role': 'STUDENT'
+            'role': 'STUDENT'                           # Step 3: only add as USER
         },
         {
             'username': 'manager',
@@ -59,26 +59,4 @@ with app.app_context():
         ))
         db.session.commit()
 
-    # add student record linked to your UMD email
-    students = [
-        {
-            'student_id': 1,
-            'first_name': 'Laith',
-            'last_name': 'Dasti',
-            'email': 'ldasti@umd.edu',
-            'major_id': 6,
-            'birth_date': dt.datetime(2004, 9, 1),
-            'is_honors': 1
-        }
-    ]
-    for each_student in students:
-        print(f'{each_student["first_name"]} {each_student["last_name"]} inserted into Student')
-        db.session.add(Student(
-            first_name=each_student["first_name"],
-            last_name=each_student["last_name"],
-            email=each_student["email"],
-            major_id=each_student["major_id"],
-            birth_date=each_student["birth_date"],
-            is_honors=each_student["is_honors"]
-        ))
-        db.session.commit()
+    print("\n Database successfully created and users inserted.")
